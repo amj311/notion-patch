@@ -33,7 +33,7 @@
 }
 
 
-@media (min-width: 1390px) {
+@media (min-width: 1800px) {
 	.layout-content .notion-table-block {
 		width: calc(var(--content-max-width) + var(--content-margin)) !important;
 		max-width: none !important;
