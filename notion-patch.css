@@ -1,0 +1,46 @@
+.layout {
+    transform: none !important;
+    --content-width: calc(100% - 500px) !important;
+    --margin-width: 100px !important;
+}
+
+.layout > .pseudoSelection > .layout-margin-right {
+    translate: 300px 0 !important;
+    padding-left: 0 !important;
+}
+
+.layout-content {
+	--side-panel-adjustment: 800px;
+	--content-max-width: 950px;
+	--content-margin: max(0px, calc((100vw - var(--content-max-width) - var(--side-panel-adjustment)) / 2));
+	max-width: var(--content-max-width) !important;
+	margin-left: var(--content-margin) !important;
+}
+
+.notion-page-content > div {
+    max-width: none !important;
+}
+
+@media (max-width: 1390px) {
+	.layout {
+		--content-width: calc(100% - 150px) !important;
+		--margin-width: 50px !important;
+	}
+
+	.layout > .pseudoSelection > .layout-margin-right {
+		translate: 50px 0 !important;
+	}
+}
+
+
+@media (min-width: 1390px) {
+	.layout-content .notion-table-block {
+		width: calc(var(--content-max-width) + var(--content-margin)) !important;
+		max-width: none !important;
+	}
+
+	.layout-content .notion-table-block .notion-table-block {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+}
